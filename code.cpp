@@ -7,7 +7,7 @@ void code::initialize()
     srand(time(NULL));
     for (int i = 0; i < num_n; i++)
     {
-        v[i] = rand() % num_m + 1;
+        v.push_back(rand() % (num_m + 1));
     }
 }
 
@@ -26,7 +26,14 @@ int code::checkCorrect(code &gc)
 
 int code::checkIncorrect(code &gc)
 {
-    return 0;
+    int count = 0;
+    // TODO: Implement the incorrect logic
+    return count;
+}
+
+void code::insertCode(int n)
+{
+    v.push_back(n);
 }
 
 void code::printCode()
@@ -35,4 +42,5 @@ void code::printCode()
     {
         std::cout << v[i] << " ";
     }
+    std::cout << std::endl;
 }

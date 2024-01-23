@@ -11,7 +11,7 @@ public:
     void initialize();
     int checkCorrect(code &gc);
     int checkIncorrect(code &gc);
-    void insertCode(int num);
+    void insertCode(int n);
     void printCode();
 
 private:
