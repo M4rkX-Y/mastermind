@@ -27,7 +27,22 @@ int code::checkCorrect(code &gc)
 int code::checkIncorrect(code &gc)
 {
     int count = 0;
-    // TODO: Implement the incorrect logic
+    std::vector<int> tv = v;
+    for (int i = 0; i < num_n; i++)
+    {
+        if (v[i] != gc.v[i])
+        {
+            for (int j = 0; j < num_n; j++)
+            {
+                if (tv[j] == gc.v[i])
+                {
+                    count++;
+                    tv[j] = num_m + 1;
+                    break;
+                }
+            }
+        }
+    }
     return count;
 }
 
