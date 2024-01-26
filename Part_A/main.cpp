@@ -1,4 +1,4 @@
-#include "mastermind.h"
+#include "code.h"
 #include <iostream>
 
 int main()
@@ -44,9 +44,4 @@ int main()
     std::cout << c.checkCorrect(gc1) << ", " << c.checkIncorrect(gc1) << std::endl;
     std::cout << c.checkCorrect(gc2) << ", " << c.checkIncorrect(gc2) << std::endl;
     std::cout << c.checkCorrect(gc3) << ", " << c.checkIncorrect(gc3) << std::endl;
-
-    // ------------------------- Part B ----------------------------
-    mastermind game;
-    game.playGame();
-    return 0;
 };

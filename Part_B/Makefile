@@ -1,6 +1,6 @@
 OBJS = code.o main.o response.o mastermind.o
 
-main: $(OBJS)
+all: $(OBJS)
 	g++ -o main $(OBJS)
 
 %o: %.cpp %.h
