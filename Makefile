@@ -1,4 +1,4 @@
-OBJS = code.o main.o
+OBJS = code.o main.o response.o mastermind.o
 
 main: $(OBJS)
 	g++ -o main $(OBJS)

@@ -33,20 +33,20 @@ int code::checkIncorrect(code &gc)
     // initialize count
     int count = 0;
     // create two maps for the code and the guess code
-    std::map<int, int> cm, gcm;
+    std::map<int, int> cmap, gcmap;
     // record the integers with their apperance in each code
     for (int i = 0; i < num_n; i++)
     {
-        cm[v[i]]++;
-        gcm[gc.v[i]]++;
+        cmap[v[i]]++;
+        gcmap[gc.v[i]]++;
     }
-    for (auto &i : gcm)
+    for (auto &i : gcmap)
     {
         // find if there are the same integers between two codes
-        if (cm.find(i.first) != cm.end())
+        if (cmap.find(i.first) != cmap.end())
         {
             // the minimum between the apperance in each code that have the same integers gives the number of correct integer guesses
-            count = count + std::min(cm[i.first], i.second);
+            count = count + std::min(cmap[i.first], i.second);
         }
     }
     // minus the correct position gives the correct guesses with incorrect positions
