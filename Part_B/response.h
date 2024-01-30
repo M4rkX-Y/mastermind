@@ -9,12 +9,13 @@ public:
     void setIncorrect(int ic);
     int getCorrect();
     int getIncorrect();
-    friend bool operator==(const response &r1, const response &r2);
-    friend std::ostream &operator<<(std::ostream &out, response &r);
 
 private:
     int correct;
     int incorrect;
 };
+
+bool operator==(response &r1, response &r2);
+std::ostream &operator<<(std::ostream &out, response &r);
 
 #endif

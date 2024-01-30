@@ -20,14 +20,14 @@ int response::getIncorrect()
     return incorrect;
 }
 
-bool operator==(const response &r1, const response &r2)
+bool operator==(response &r1, response &r2)
 {
-    return (r1.correct == r2.correct) && (r1.incorrect == r2.incorrect);
+    return (r1.getCorrect() == r2.getCorrect()) && (r1.getIncorrect() == r2.getIncorrect());
 }
 
 std::ostream &operator<<(std::ostream &out, response &r)
 {
-    out << "Correct Guesses at Correct Location: " << r.correct << std::endl;
-    out << "Correct Guesses at Incorrect Location: " << r.incorrect << std::endl;
+    out << "Correct Guesses at Correct Location: " << r.getCorrect() << std::endl;
+    out << "Correct Guesses at Incorrect Location: " << r.getIncorrect() << std::endl;
     return out;
 }
